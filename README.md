@@ -6,6 +6,8 @@ Right now it can two things:
 - Open trace (File - open trace - select .gfxr file - Open) - shows all vulkan commands from .gfxr file
 I've heard, gfxreconstruct can work with DirectX12, but I have no application to test it. Probably later.
 
+The application's main windows is separated on two parts: the table with commands and details window of one command. Select row to show details of command
+
 I used python and tkinter because it's easy to use and easy to change.
 
 Inspired by https://github.com/apitrace/apitrace
