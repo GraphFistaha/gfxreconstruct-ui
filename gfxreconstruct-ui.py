@@ -44,11 +44,12 @@ def OpenFile(app: tk.Tk, filename :pathlib.Path):
     if result.returncode != 0:
         print(result.stderr.decode("utf-8"))
         return False
+    app.title(f'{APPLICATION_TITLE} - ${filename.name}')
     result_file = filename.with_suffix('.json')
     with open(result_file, mode='r', encoding='utf-8') as f:
         js = json.load(f)
         g_currentTraceDf = buildTraceView(js)
-        df_subset = g_currentTraceDf[['function', 'frame']] 
+        df_subset = g_currentTraceDf[['frame', 'function']] 
         g_treeView.updateModel(TableModel(df_subset))
         g_treeView.redraw()
     os.remove(result_file)
