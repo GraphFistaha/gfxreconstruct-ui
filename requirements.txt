@@ -1,0 +1,2 @@
+pandas == 3.0.2
+pandastable == 0.14.0
