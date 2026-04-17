@@ -1,2 +1,15 @@
 # gfxreconstruct-ui
-UI viewer for GFXreconstruct
+The problem is gfxreconstruct generates json, so and it's hard to read and analize. So I've created this GUI application for gfxreconstruct
+
+Right now it can two things:
+- capture trace (File - Capture - (set path to application) - Run) - launchs application, record all commands and save it in .gfxr file
+- Open trace (File - open trace - select .gfxr file - Open) - shows all vulkan commands from .gfxr file
+I've heard, gfxreconstruct can work with DirectX12, but I have no application to test it. Probably later.
+
+I used python and tkinter because it's easy to use and easy to change.
+
+Inspired by https://github.com/apitrace/apitrace
+
+# How it's look like:
+<img width="1002" height="815" alt="image" src="https://github.com/user-attachments/assets/09dafc5c-160e-4bbf-8027-6049406dc468" />
+
